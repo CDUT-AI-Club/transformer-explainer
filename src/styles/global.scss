@@ -1,0 +1,52 @@
+svg {
+	overflow: visible;
+}
+
+[role='button'],
+button {
+	svg:focus {
+		outline: none;
+	}
+}
+
+*:focus {
+	outline: none;
+}
+
+/* CJK font stack: Latin glyphs stay on the default UI face, Chinese falls to
+   Noto Sans SC (bundled locally, offline-safe), then to the OS faces. */
+:root {
+	--font-cjk: 'Noto Sans SC', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+		'Source Han Sans SC', 'WenQuanYi Micro Hei', sans-serif;
+	--font-cjk-mono: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', ui-monospace, monospace;
+
+	font-size: 17px;
+}
+
+body {
+	font-family:
+		var(--font-cjk),
+		ui-sans-serif,
+		system-ui,
+		-apple-system,
+		'Segoe UI',
+		Roboto,
+		'Helvetica Neue',
+		Arial,
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Chinese has no word spacing: the Latin-only negative tracking that the
+   original design uses for token labels makes CJK glyphs collide. */
+[lang='zh-CN'] .token-string,
+[lang='zh-CN'] .label,
+[lang='zh-CN'] .title-text {
+	letter-spacing: 0;
+}
+
+@media (min-width: 2560px) {
+	:root {
+		font-size: 18px;
+	}
+}

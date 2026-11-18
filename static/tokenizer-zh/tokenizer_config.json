@@ -1,0 +1,13 @@
+{
+  "clean_up_tokenization_spaces": false,
+  "model_max_length": 1024,
+  "tokenizer_class": "BertTokenizer",
+  "unk_token": "[UNK]",
+  "pad_token": "[PAD]",
+  "cls_token": "[CLS]",
+  "sep_token": "[SEP]",
+  "mask_token": "[MASK]",
+  "do_lower_case": true,
+  "strip_accents": null,
+  "tokenize_chinese_chars": true
+}
